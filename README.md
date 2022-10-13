@@ -50,12 +50,12 @@ This page could also show error based on the OpenWeather API response.
 ![Alt text](docs/6.jpeg "Weather Page Error")
 
 ## Libraries Used
-[Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
-[Bootstrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development. 
-[date-fns](https://github.com/date-fns/date-fns) - Modern JavaScript date utility library
-[Lodash](https://github.com/lodash/lodash) - A modern JavaScript utility library delivering modularity, performance & extras.
+- [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
+- [Bootstrap](https://github.com/twbs/bootstrap) - Sleek, intuitive, and powerful front-end framework for faster and easier web development. 
+- [date-fns](https://github.com/date-fns/date-fns) - Modern JavaScript date utility library
+- [Lodash](https://github.com/lodash/lodash) - A modern JavaScript utility library delivering modularity, performance & extras.
 
-## Third-party integrations
+## Third-party Integrations
 
-[Auth0](https://auth0.com/) - For OAuth Implementation
-[OpenWeather](https://openweathermap.org/api) - API for Fetching Weather Data
+- [Auth0](https://auth0.com/) - For OAuth Implementation
+- [OpenWeather](https://openweathermap.org/api) - API for Fetching Weather Data
