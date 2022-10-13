@@ -4,6 +4,7 @@ import { useRoute, useRouter } from 'vue-router';
 import { format } from 'date-fns';
 import Button from './elements/Button.vue';
 import axios from 'axios';
+import _ from 'lodash';
 
 const router = useRouter(),
       route = useRoute(),
@@ -43,13 +44,13 @@ const getWeather = () => {
       temp: main.temp,
       pressure: main.pressure,
       humidity: main.humidity,
-      description: weather.description,
-      main: weather.main,
+      description: _.startCase(weather.description),
+      main: _.startCase(weather.main),
       name: data.name,
     }
   }).catch(err => {
     // Get error message from response
-    error.value = err.response.data.message;
+    error.value = _.startCase(_.get(err, 'response.data.message', ''));
   }).finally(() => {
     loading.value = false;
   })
