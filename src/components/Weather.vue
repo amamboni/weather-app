@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { format } from 'date-fns';
 import Button from './elements/Button.vue';
 import axios from 'axios';
 
@@ -36,7 +37,7 @@ const getWeather = () => {
     const data = response.data;
     const main = data.main || { temp: '', pressure: '', humidity: ''}; // Set default value if undefined
     const weather = data.weather && data.weather.length ? data.weather[0] : {description: '', main: ''}; // Set default value if undefined
-    const date = data.dt ? data.dt : '';
+    const date = data.dt ? format(data.dt*1000, 'MM/dd/yyyy') : ''; // Format date from timestamp
     result.value = {
       date,
       temp: main.temp,
