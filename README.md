@@ -12,9 +12,9 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
-```sh
-npm install
-```
+1. Copy ``.env.sample`` and rename it to ``.env`` and update its values.
+
+2. Run the ``npm install`` in command line.
 
 ### Compile and Hot-Reload for Development
 

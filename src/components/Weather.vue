@@ -28,14 +28,15 @@ const getWeather = () => {
   loading.value = true;
 
   // URL of the OpenWeather API
-  const url = 'https://api.openweathermap.org/data/2.5/weather';
+  const url = import.meta.env.VITE_OPEN_WEATHER_API_URL;
   const params = {
     q: city, // Name of the city
-    appid: '9fb185256a8994ebbaca315a3486bae6', // API Key
+    appid: import.meta.env.VITE_OPEN_WEATHER_API_KEY, // API Key
     units: 'imperial', // Units convention. See: https://openweathermap.org/current#data
   };
   axios.get(url, {params}).then(response => {
     const data = response.data;
+    console.log(data);
     const main = data.main || { temp: '', pressure: '', humidity: ''}; // Set default value if undefined
     const weather = data.weather && data.weather.length ? data.weather[0] : {description: '', main: ''}; // Set default value if undefined
     const date = data.dt ? format(data.dt*1000, 'MM/dd/yyyy') : ''; // Format date from timestamp
