@@ -36,7 +36,7 @@ const getWeather = () => {
   };
   axios.get(url, {params}).then(response => {
     const data = response.data;
-    console.log(data);
+    
     const main = data.main || { temp: '', pressure: '', humidity: ''}; // Set default value if undefined
     const weather = data.weather && data.weather.length ? data.weather[0] : {description: '', main: ''}; // Set default value if undefined
     const date = data.dt ? format(data.dt*1000, 'MM/dd/yyyy') : ''; // Format date from timestamp
